@@ -15,7 +15,7 @@ jobs:
           python-version: "3.11"
       - name: Install pipenv
         run: |
-          python -m pip install --upgrade pipenv wheel
+          python -m pip install pipenv==2022.10.12
       - name: Install dependencies
         run: |
           pipenv install --deploy --dev
