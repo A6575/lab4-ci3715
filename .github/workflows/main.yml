@@ -22,9 +22,15 @@ jobs:
       - name: Install dependencies
         run: |
           pipenv install --deploy --dev
+      - name: Install pytest-cov
+        run: |
+          pipenv install --dev pytest-cov
+      - name: Install pytest-cov
+        run: |
+          pipenv install --dev pytest-cov
       - name: Run test suite
         run: |
-          pipenv run pytest
+          pipenv run pytest --cov
       - name: Run black formatter
         uses: rickstaa/action-black@v1.3.3
             
